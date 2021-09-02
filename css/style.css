@@ -14,6 +14,10 @@ body {
   place-items: center;
 }
 
+ul {
+  list-style: none;
+}
+
 #main {
   background-color: grey;
   width: 80vw;
@@ -44,7 +48,9 @@ body {
 #main .butns_parent {
   display: -ms-grid;
   display: grid;
-  place-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
 
 @media all and (max-width: 724px) {
