@@ -19,7 +19,7 @@ ul {
 }
 
 #main {
-  background-color: grey;
+  border: 4px solid grey;
   width: 80vw;
   height: 85vh;
 }
@@ -46,10 +46,14 @@ ul {
 }
 
 #main .butns_parent {
+  height: 100%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  place-items: center;
   grid-gap: 1em;
 }
 
