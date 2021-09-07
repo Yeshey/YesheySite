@@ -40,17 +40,14 @@ ul {
         display: grid;
         // lifesaver, switch between automatic columns based on rows or reversed
         grid-auto-flow: column;
-        //grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+        grid-template-columns: repeat(auto-fill, 1fr);
         grid-template-rows: 1fr 1fr;
-        //grid-template-rows: repeat(2, minmax(1fr, 1fr));
-        
-        
-        //grid-template-rows: 1fr 1fr;
+
         place-items: center;
         
         //grid-template-columns: repeat(3, 1fr);
         grid-gap:1em;
-        > li {
+        > div {
         }
     }
 }

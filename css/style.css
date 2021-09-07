@@ -51,6 +51,8 @@ ul {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  -ms-grid-columns: (1fr)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 1fr);
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   place-items: center;
