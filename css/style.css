@@ -19,11 +19,11 @@ body {
 }
 
 .borders {
-  border: 2px solid #1de3e1;
+  border: 2px solid #c347bc;
 }
 
 .borderd {
-  border: 2px dotted #968556;
+  border: 2px dotted #c0494c;
 }
 
 /*
@@ -71,6 +71,12 @@ a {
   background: url(../imgs/patreon.svg) no-repeat left top;
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
+}
+
+.insta {
+  background: url(../imgs/Instagram.svg) no-repeat left top;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 .deviantart {
