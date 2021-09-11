@@ -8,7 +8,15 @@ body {
     overflow: hidden; /* Hide scrollbars */
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    // Nobody's ever gonna notice this but whatever
+    transition: 0s;
     background-color: rgb(25, 28, 39);
+    &:hover {
+        background: linear-gradient(to right bottom, rgb(25, 28, 39), rgb(25, 33, 39));
+    }
+    background-color: rgb(25, 28, 39);
+
     width: 100vw;
     height: 100vh;
     display: grid;

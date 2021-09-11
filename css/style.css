@@ -10,12 +10,20 @@ body {
   /* Hide scrollbars */
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-transition: 0s;
+  transition: 0s;
+  background-color: #191c27;
   background-color: #191c27;
   width: 100vw;
   height: 100vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+body:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#191c27), to(#192127));
+  background: linear-gradient(to right bottom, #191c27, #192127);
 }
 
 /*
