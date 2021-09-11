@@ -19,11 +19,11 @@ body {
 }
 
 .borders {
-  border: 2px solid #118a69;
+  border: 2px solid #2c2a64;
 }
 
 .borderd {
-  border: 2px dotted #a8be56;
+  border: 2px dotted #9cb2f4;
 }
 
 /*
@@ -61,22 +61,25 @@ a {
   height: 100%;
 }
 
-.imagewithin {
+.lbry {
   background: url(../imgs/lbry.svg) no-repeat left top;
+}
+
+.imagewithin {
   background-size: contain;
   background-position: center;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .imagewithin:hover {
   cursor: pointer;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
-  -webkit-transform: scale(100%);
-          transform: scale(100%);
-  -webkit-transform: scale(1.8) rotate(0.01deg);
-          transform: scale(1.8) rotate(0.01deg);
+  -webkit-transform: scale(1.4) rotate(5deg);
+          transform: scale(1.4) rotate(5deg);
 }
 
 /*

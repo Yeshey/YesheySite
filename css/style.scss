@@ -57,17 +57,18 @@ a{
     height: 100%;
 }
 
-.imagewithin{
-    //width: 100%;
+.lbry {
     background: url(../imgs/lbry.svg) no-repeat left top;
+}
+.imagewithin{
     background-size: contain;
     background-position: center;
     filter: grayscale(100%);
+    transition: 0.1s;
     &:hover{
         cursor: pointer;
         filter: grayscale(0%);
-        transform: scale(100%);
-        transform: scale(1.8) rotate(0.01deg);
+        transform: scale(1.4) rotate(5deg);
     }
 }
 
