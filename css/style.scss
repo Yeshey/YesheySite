@@ -15,12 +15,14 @@ body {
     place-items: center;
 }
 
+
 .borders{
     border: 2px solid rgb(random(255), random(255), random(255));
 }
 .borderd{
     border: 2px dotted rgb(random(255), random(255), random(255));
 }
+
 
 /*
 .my-container{
@@ -44,7 +46,7 @@ body {
 }
 
 .row{
-    height: 25vh;
+    height: 20vh;
 }
 @media only screen and (max-width: 575px) {   
     .row{
@@ -57,6 +59,30 @@ a{
     height: 100%;
 }
 
+.mail{
+    background: url(../imgs/mail.svg) no-repeat left top;
+    transform: scale(0.9) rotate(-1deg);
+}
+.patreon{
+    background: url(../imgs/patreon.svg) no-repeat left top;
+    transform: rotate(1deg);
+}
+.deviantart{
+    background: url(../imgs/deviantart.svg) no-repeat left top;
+    transform: rotate(1deg);
+}
+.discord{
+    background: url(../imgs/discord.svg) no-repeat left top;
+    transform: rotate(3deg);
+}
+.github{
+    background: url(../imgs/github-desktop.svg) no-repeat left top;
+    transform: rotate(1deg);
+}
+.youtube{
+    background: url(../imgs/YouTube.svg) no-repeat left top;
+    transform: scale(0.9) rotate(-1deg);
+}
 .lbry {
     background: url(../imgs/lbry.svg) no-repeat left top;
 }
@@ -64,11 +90,23 @@ a{
     background-size: contain;
     background-position: center;
     filter: grayscale(100%);
-    transition: 0.1s;
+
     &:hover{
+        transition: 0.15s;
         cursor: pointer;
         filter: grayscale(0%);
         transform: scale(1.4) rotate(5deg);
+    }
+}
+/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
+@media (pointer:coarse) {
+    input[type="checkbox"], input[type="radio"] {
+        min-width:30px;
+        min-height:40px;
+        background:transparent;
+    }
+    .imagewithin{
+        filter: grayscale(0%);
     }
 }
 

@@ -19,11 +19,11 @@ body {
 }
 
 .borders {
-  border: 2px solid #2c2a64;
+  border: 2px solid #1de3e1;
 }
 
 .borderd {
-  border: 2px dotted #9cb2f4;
+  border: 2px dotted #968556;
 }
 
 /*
@@ -47,7 +47,7 @@ body {
 }
 
 .row {
-  height: 25vh;
+  height: 20vh;
 }
 
 @media only screen and (max-width: 575px) {
@@ -61,6 +61,42 @@ a {
   height: 100%;
 }
 
+.mail {
+  background: url(../imgs/mail.svg) no-repeat left top;
+  -webkit-transform: scale(0.9) rotate(-1deg);
+          transform: scale(0.9) rotate(-1deg);
+}
+
+.patreon {
+  background: url(../imgs/patreon.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+.deviantart {
+  background: url(../imgs/deviantart.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+.discord {
+  background: url(../imgs/discord.svg) no-repeat left top;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.github {
+  background: url(../imgs/github-desktop.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+.youtube {
+  background: url(../imgs/YouTube.svg) no-repeat left top;
+  -webkit-transform: scale(0.9) rotate(-1deg);
+          transform: scale(0.9) rotate(-1deg);
+}
+
 .lbry {
   background: url(../imgs/lbry.svg) no-repeat left top;
 }
@@ -70,16 +106,29 @@ a {
   background-position: center;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
 }
 
 .imagewithin:hover {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
   cursor: pointer;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transform: scale(1.4) rotate(5deg);
           transform: scale(1.4) rotate(5deg);
+}
+
+/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
+@media (pointer: coarse) {
+  input[type="checkbox"], input[type="radio"] {
+    min-width: 30px;
+    min-height: 40px;
+    background: transparent;
+  }
+  .imagewithin {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
 }
 
 /*
