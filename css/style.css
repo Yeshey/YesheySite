@@ -18,14 +18,14 @@ body {
   place-items: center;
 }
 
-.borders {
-  border: 2px solid #c347bc;
+/*
+.borders{
+    border: 2px solid rgb(random(255), random(255), random(255));
 }
-
-.borderd {
-  border: 2px dotted #c0494c;
+.borderd{
+    border: 2px dotted rgb(random(255), random(255), random(255));
 }
-
+*/
 /*
 .my-container{
     border: 1px solid white;
