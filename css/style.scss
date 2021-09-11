@@ -92,7 +92,7 @@ a{
     background-position: center;
     filter: grayscale(100%);
 }
-@media (hover: hover) { /* solves sticky hover problem on touchscreen? */
+@media (hover: hover) { /* solves sticky hover problem on touchscreen */
     .imagewithin {
         &:hover{
             transition: 0.15s;
