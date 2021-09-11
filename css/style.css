@@ -114,14 +114,17 @@ a {
           filter: grayscale(100%);
 }
 
-.imagewithin:hover {
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-  cursor: pointer;
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  -webkit-transform: scale(1.3) rotate(5deg);
-          transform: scale(1.3) rotate(5deg);
+@media (hover: hover) {
+  /* solves sticky hover problem on touchscreen? */
+  .imagewithin:hover {
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+    cursor: pointer;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+    -webkit-transform: scale(1.3) rotate(5deg);
+            transform: scale(1.3) rotate(5deg);
+  }
 }
 
 /* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
