@@ -26,6 +26,13 @@ body:hover {
   background: linear-gradient(to right bottom, #191c27, #192127);
 }
 
+@media (pointer: coarse) {
+  body {
+    overflow: visible;
+    /* show scrollbars */
+  }
+}
+
 /*
 // For seing the borders of the grid
 .borders{

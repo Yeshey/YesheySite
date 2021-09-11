@@ -22,6 +22,11 @@ body {
     display: grid;
     place-items: center;
 }
+@media (pointer:coarse) {
+    body {
+        overflow: visible; /* show scrollbars */
+    }    
+}
 
 /*
 // For seing the borders of the grid
