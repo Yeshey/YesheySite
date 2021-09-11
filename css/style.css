@@ -19,52 +19,47 @@ body {
 }
 
 .borders {
-  border: 2px solid #3b16dd;
+  border: 2px solid #01d12f;
 }
 
 .borderd {
-  border: 2px dotted #7e5cc7;
+  border: 2px dotted #63fd6a;
 }
 
-.my-container {
-  border: 1px solid white;
-  height: 30vh;
-  width: 80vw;
+/*
+.my-container{
+    border: 1px solid white;
+    height: 30vh;
+    width: 80vw;
 }
-
-.my-row {
-  border: 3px solid red;
-  height: 100%;
+.my-row{
+    border:3px solid red;
+    height: 100%;
+    //width: 100%;
 }
-
-.my-col {
-  border: 3px dotted cyan;
-  height: 100%;
-  width: 100%;
-}
-
-.feature_image img {
-  height: 100%;
-  width: 100%;
-}
-
+.my-col{
+    border:3px dotted cyan;
+    height: 100%;
+    width: 100%;
+}*/
 .container-fluid {
   width: 90vw;
 }
 
 .row {
-  height: 20vh;
+  height: 25vh;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 575px) {
+  .row {
+    height: 45vh;
+  }
 }
 
 .imagewithin {
   background: url(../imgs/lbry.svg) no-repeat left top;
-  background-size: 100%;
-  background-size: 1;
+  background-size: contain;
+  background-position: center;
 }
 
 /*
