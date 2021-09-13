@@ -115,7 +115,7 @@ a {
 }
 
 @media (hover: hover) {
-  /* solves sticky hover problem on touchscreen? */
+  /* solves sticky hover problem on touchscreen */
   .imagewithin:hover {
     -webkit-transition: 0.15s;
     transition: 0.15s;
