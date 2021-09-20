@@ -28,7 +28,6 @@ body {
     }    
 }
 
-/*
 // For seing the borders of the grid
 .borders{
     border: 2px solid rgb(random(255), random(255), random(255));
@@ -36,9 +35,9 @@ body {
 .borderd{
     border: 2px dotted rgb(random(255), random(255), random(255));
 }
-*/
 
 // Sizing
+/*
 .container-fluid{
     width: 90vw;
 }
@@ -92,7 +91,7 @@ a{
     background-position: center;
     filter: grayscale(100%);
 }
-@media (hover: hover) { /* solves sticky hover problem on touchscreen */
+@media (hover: hover) { // solves sticky hover problem on touchscreen 
     .imagewithin {
         &:hover{
             transition: 0.15s;
@@ -102,7 +101,7 @@ a{
         } 
     }
 }
-/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
+// Make radio buttons and check boxes larger if we have an inaccurate pointing device
 @media (pointer:coarse) {
     input[type="checkbox"], input[type="radio"] {
         min-width:30px;
@@ -120,7 +119,7 @@ a{
 @media only screen and (max-width: 575px) {
     .my-mt-5{margin-top: 0 !important;}
 }
-
+*/
 
 
 /*
