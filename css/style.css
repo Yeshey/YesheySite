@@ -47,8 +47,8 @@ body:hover {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
-      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-rows: (minmax(150px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   place-items: center;
   /*
     // lifesaver, switch between automatic columns based on rows or reversed

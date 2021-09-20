@@ -37,6 +37,8 @@ body {
 }
 
 .g-container{
+    // way to fix IT: https://stackoverflow.com/questions/54370822/how-to-make-the-items-in-the-last-row-consume-remaining-space-in-css-grid
+
     width: 90vw;
     height: 45vh;
 
@@ -48,7 +50,7 @@ body {
     //place-items: center;
 
     grid-auto-flow: column;
-    grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px,1fr));
     //grid-template-columns: repeat(auto-fit, 1fr);
     //auto-fit and auto-fill!
     place-items: center;
