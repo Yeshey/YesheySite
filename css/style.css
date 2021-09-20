@@ -34,11 +34,48 @@ body:hover {
 }
 
 .borders {
-  border: 2px solid #97b768;
+  border: 2px solid #fff;
 }
 
 .borderd {
-  border: 2px dotted #2326cb;
+  border: 2px dotted #50e976;
+}
+
+.g-container {
+  width: 90vw;
+  height: 45vh;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
+  /*
+    // lifesaver, switch between automatic columns based on rows or reversed
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    //grid-template-rows: 1fr minmax(1fr,1fr);
+    grid-template-rows: 1fr 1fr;
+
+    place-items: center;
+    grid-gap:1em;
+    */
+}
+
+.g-container > div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media all and (max-width: 724px) {
+  .g-container {
+    background-color: red;
+    width: 95vw;
+    height: 95vh;
+  }
 }
 
 /*
