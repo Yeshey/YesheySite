@@ -61,7 +61,7 @@ body {
     //grid-template-columns: repeat(3, 1fr);
 
     > div {
-        flex: 0 0 16.66%;
+        flex: 0 0 17.66%;               // play with this value when adding new entries
         
         display: grid;
         place-items: center;
