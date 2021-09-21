@@ -62,8 +62,6 @@ body {
 
     > div {
         flex: 0 0 16.66%;
-        background: teal;
-        color: white;
         
         //height: 50%;
         //width: 100px;
@@ -96,7 +94,7 @@ body {
         height: 45vh;
     }    
 }
-
+*/
 // Buttons
 a{
     width: 100%;
@@ -104,7 +102,11 @@ a{
 }
 .mail{
     background: url(../imgs/mail.svg) no-repeat left top;
-    transform: scale(0.9) rotate(-1deg);
+    transform: scale(1) rotate(-1deg);
+}
+.twitter{
+    background: url(../imgs/twitter.svg) no-repeat left top;
+    transform: rotate(-2deg);
 }
 .patreon{
     background: url(../imgs/patreon.svg) no-repeat left top;
@@ -128,7 +130,7 @@ a{
 }
 .youtube{
     background: url(../imgs/YouTube.svg) no-repeat left top;
-    transform: scale(0.9) rotate(-1deg);
+    transform: scale(1) rotate(-1deg);
 }
 .lbry {
     background: url(../imgs/lbry.svg) no-repeat left top;
@@ -160,6 +162,7 @@ a{
         filter: grayscale(0%);
     }
 }
+/*
 .my-mt-5{
     margin-top: 45px !important;
 }
