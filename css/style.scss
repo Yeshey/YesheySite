@@ -52,7 +52,7 @@ body {
 
     grid-auto-flow: column;
     grid-template-rows: repeat(auto-fit, minmax(50%,1fr));
-    grid-template-rows: repeat(auto-fit, minmax(150px,1fr));
+    //grid-template-rows: repeat(auto-fit, minmax(150px,1fr));
     
     //auto-fit and auto-fill!
     place-items: center;
