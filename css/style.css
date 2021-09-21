@@ -74,7 +74,6 @@ body:hover {
           flex: 0 0 16.66%;
   background: teal;
   color: white;
-  height: 50%;
 }
 
 @media all and (max-width: 724px) {
