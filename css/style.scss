@@ -63,6 +63,8 @@ body {
     > div {
         flex: 0 0 16.66%;
         
+        display: grid;
+        place-items: center;
         //height: 50%;
         //width: 100px;
 
@@ -99,7 +101,6 @@ body {
 a{
     width: 100%;
     height: 100%;
-    background-color: red;
 }
 .mail{
     background: url(../imgs/mail.svg) no-repeat left top;
