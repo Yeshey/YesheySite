@@ -105,70 +105,98 @@ body:hover {
         height: 45vh;
     }    
 }
+*/
+a {
+  width: 100%;
+  height: 100%;
+}
 
-// Buttons
-a{
-    width: 100%;
-    height: 100%;
+.mail {
+  background: url(../imgs/mail.svg) no-repeat left top;
+  -webkit-transform: scale(1) rotate(-1deg);
+          transform: scale(1) rotate(-1deg);
 }
-.mail{
-    background: url(../imgs/mail.svg) no-repeat left top;
-    transform: scale(0.9) rotate(-1deg);
+
+.twitter {
+  background: url(../imgs/twitter.svg) no-repeat left top;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
-.patreon{
-    background: url(../imgs/patreon.svg) no-repeat left top;
-    transform: rotate(1deg);
+
+.patreon {
+  background: url(../imgs/patreon.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
 }
-.insta{
-    background: url(../imgs/Instagram.svg) no-repeat left top;
-    transform: rotate(-3deg);
+
+.insta {
+  background: url(../imgs/Instagram.svg) no-repeat left top;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
-.deviantart{
-    background: url(../imgs/deviantart.svg) no-repeat left top;
-    transform: rotate(1deg);
+
+.deviantart {
+  background: url(../imgs/deviantart.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
 }
-.discord{
-    background: url(../imgs/discord.svg) no-repeat left top;
-    transform: rotate(3deg);
+
+.discord {
+  background: url(../imgs/discord.svg) no-repeat left top;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
-.github{
-    background: url(../imgs/github-desktop.svg) no-repeat left top;
-    transform: rotate(1deg);
+
+.github {
+  background: url(../imgs/github-desktop.svg) no-repeat left top;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
 }
-.youtube{
-    background: url(../imgs/YouTube.svg) no-repeat left top;
-    transform: scale(0.9) rotate(-1deg);
+
+.youtube {
+  background: url(../imgs/YouTube.svg) no-repeat left top;
+  -webkit-transform: scale(1) rotate(-1deg);
+          transform: scale(1) rotate(-1deg);
 }
+
 .lbry {
-    background: url(../imgs/lbry.svg) no-repeat left top;
+  background: url(../imgs/lbry.svg) no-repeat left top;
 }
-.imagewithin{
-    background-size: contain;
-    background-position: center;
-    filter: grayscale(100%);
+
+.imagewithin {
+  background-size: contain;
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
-@media (hover: hover) { // solves sticky hover problem on touchscreen 
-    .imagewithin {
-        &:hover{
-            transition: 0.15s;
-            cursor: pointer;
+
+@media (hover: hover) {
+  .imagewithin:hover {
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+    cursor: pointer;
+    -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
+    -webkit-transform: scale(1.3) rotate(5deg);
             transform: scale(1.3) rotate(5deg);
-        } 
-    }
+  }
 }
-// Make radio buttons and check boxes larger if we have an inaccurate pointing device
-@media (pointer:coarse) {
-    input[type="checkbox"], input[type="radio"] {
-        min-width:30px;
-        min-height:40px;
-        background:transparent;
-    }
-    .imagewithin{
-        transform: scale(0.9);
-        filter: grayscale(0%);
-    }
+
+@media (pointer: coarse) {
+  input[type="checkbox"], input[type="radio"] {
+    min-width: 30px;
+    min-height: 40px;
+    background: transparent;
+  }
+  .imagewithin {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
 }
+
+/*
 .my-mt-5{
     margin-top: 45px !important;
 }
