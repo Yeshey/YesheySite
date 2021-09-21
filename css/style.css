@@ -33,29 +33,75 @@ body:hover {
   }
 }
 
-/*
-// For seing the borders of the grid
-.borders{
-    border: 2px solid rgb(random(255), random(255), random(255));
+.borders {
+  border: 2px solid #fff;
 }
-.borderd{
-    border: 2px dotted rgb(random(255), random(255), random(255));
+
+.borderd {
+  border: 2px dotted #50e976;
 }
-*/
-.container-fluid {
+
+.g-container {
   width: 90vw;
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  /*
+    // lifesaver, switch between automatic columns based on rows or reversed
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    //grid-template-rows: 1fr minmax(1fr,1fr);
+    grid-template-rows: 1fr 1fr;
+
+    place-items: center;
+    grid-gap:1em;
+    */
 }
 
-.row {
-  height: 20vh;
+.g-container > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.66%;
+          flex: 0 0 16.66%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
-@media only screen and (max-width: 575px) {
-  .row {
-    height: 45vh;
+@media all and (max-width: 724px) {
+  .g-container {
+    background-color: rgba(0, 110, 255, 0.459);
+    width: 95vw;
+    height: 95vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
+/*
+.container-fluid{
+    width: 90vw;
+}
+.row{
+    height: 20vh;
+}
+@media only screen and (max-width: 575px) {   
+    .row{
+        height: 45vh;
+    }    
+}
+*/
 a {
   width: 100%;
   height: 100%;
@@ -63,8 +109,14 @@ a {
 
 .mail {
   background: url(../imgs/mail.svg) no-repeat left top;
-  -webkit-transform: scale(0.9) rotate(-1deg);
-          transform: scale(0.9) rotate(-1deg);
+  -webkit-transform: scale(1) rotate(-1deg);
+          transform: scale(1) rotate(-1deg);
+}
+
+.twitter {
+  background: url(../imgs/twitter.svg) no-repeat left top;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 
 .patreon {
@@ -99,8 +151,8 @@ a {
 
 .youtube {
   background: url(../imgs/YouTube.svg) no-repeat left top;
-  -webkit-transform: scale(0.9) rotate(-1deg);
-          transform: scale(0.9) rotate(-1deg);
+  -webkit-transform: scale(1) rotate(-1deg);
+          transform: scale(1) rotate(-1deg);
 }
 
 .lbry {
@@ -115,7 +167,6 @@ a {
 }
 
 @media (hover: hover) {
-  /* solves sticky hover problem on touchscreen */
   .imagewithin:hover {
     -webkit-transition: 0.15s;
     transition: 0.15s;
@@ -127,7 +178,6 @@ a {
   }
 }
 
-/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
 @media (pointer: coarse) {
   input[type="checkbox"], input[type="radio"] {
     min-width: 30px;
@@ -142,16 +192,14 @@ a {
   }
 }
 
-.my-mt-5 {
-  margin-top: 45px !important;
+/*
+.my-mt-5{
+    margin-top: 45px !important;
 }
-
 @media only screen and (max-width: 575px) {
-  .my-mt-5 {
-    margin-top: 0 !important;
-  }
+    .my-mt-5{margin-top: 0 !important;}
 }
-
+*/
 /*
 * {
     transition: 1s;
