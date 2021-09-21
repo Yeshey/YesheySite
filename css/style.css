@@ -44,14 +44,18 @@ body:hover {
 .g-container {
   width: 90vw;
   height: 45vh;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
-      grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
-  -ms-grid-rows: (minmax(150px, 1fr))[auto-fit];
-      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   /*
     // lifesaver, switch between automatic columns based on rows or reversed
     grid-auto-flow: row;
@@ -64,22 +68,12 @@ body:hover {
     */
 }
 
-.g-container *:nth-child(3n-1):nth-last-of-type(1) {
-  border-color: red;
-  grid-column: span 2;
-}
-
-.g-container *:nth-child(3n-2):nth-last-of-type(1) {
-  border-color: red;
-  grid-column: span 3;
-}
-
 .g-container > div {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  height: 100%;
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.66%;
+          flex: 0 0 16.66%;
+  background: teal;
+  color: white;
 }
 
 @media all and (max-width: 724px) {
@@ -87,11 +81,10 @@ body:hover {
     background-color: rgba(0, 110, 255, 0.459);
     width: 95vw;
     height: 95vh;
-    grid-auto-flow: row;
-    -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
-        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-    -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
