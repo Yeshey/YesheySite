@@ -50,10 +50,22 @@ body {
     //place-items: center;
 
     grid-auto-flow: column;
+    grid-template-rows: repeat(auto-fit, minmax(50%,1fr));
     grid-template-rows: repeat(auto-fit, minmax(150px,1fr));
-    //grid-template-columns: repeat(auto-fit, 1fr);
+    
     //auto-fit and auto-fill!
     place-items: center;
+    
+    *:nth-child(3n-1):nth-last-of-type(1) {
+        border-color: red;
+        grid-column: span 2;
+      }
+      
+    *:nth-child(3n-2):nth-last-of-type(1) {
+        border-color: red;
+        grid-column: span 3;
+      }
+
     /*
     // lifesaver, switch between automatic columns based on rows or reversed
     grid-auto-flow: row;
@@ -75,15 +87,16 @@ body {
 
         //aspect-ratio: 1 / 1;
     }
-    .tile {
-
-    }
 }
 @media all and (max-width: 724px){
     .g-container {
-        background-color: red;
+        background-color: rgba(0, 110, 255, 0.459);
         width: 95vw;
         height: 95vh;
+
+        grid-auto-flow: row;
+        grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
     }
 }
 

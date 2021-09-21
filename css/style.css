@@ -47,6 +47,8 @@ body:hover {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
   -ms-grid-rows: (minmax(150px, 1fr))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   place-items: center;
@@ -62,6 +64,16 @@ body:hover {
     */
 }
 
+.g-container *:nth-child(3n-1):nth-last-of-type(1) {
+  border-color: red;
+  grid-column: span 2;
+}
+
+.g-container *:nth-child(3n-2):nth-last-of-type(1) {
+  border-color: red;
+  grid-column: span 3;
+}
+
 .g-container > div {
   display: -ms-grid;
   display: grid;
@@ -72,9 +84,14 @@ body:hover {
 
 @media all and (max-width: 724px) {
   .g-container {
-    background-color: red;
+    background-color: rgba(0, 110, 255, 0.459);
     width: 95vw;
     height: 95vh;
+    grid-auto-flow: row;
+    -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
 
