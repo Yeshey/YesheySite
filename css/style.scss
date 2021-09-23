@@ -4,6 +4,8 @@
     color: white;
 }
 
+// @media (prefer-color-scheme : dark) {   }
+
 body {
     overflow: hidden; /* Hide scrollbars */
     margin: 0;
@@ -15,7 +17,6 @@ body {
     &:hover {
         background: linear-gradient(to right bottom, rgb(25, 28, 39), rgb(25, 33, 39));
     }
-    background-color: rgb(25, 28, 39);
 
     width: 100vw;
     height: 100vh;
