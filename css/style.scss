@@ -1,3 +1,12 @@
+// Auxiliar classes for seing the borders of the grid
+.borders{
+    border: 2px solid #fff;
+}
+.borderd{
+    border: 2px dotted rgb(80, 233, 118);
+}
+
+
 * {
     transition: 1s;
     position: relative;
@@ -29,17 +38,25 @@ body {
     }    
 }
 
-// For seing the borders of the grid
-.borders{
-    border: 2px solid #fff;
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    > div:first-child{
+        border: burlywood;
+        flex:1;
+        display:grid;
+        place-items: center;
+    }
+    .lock{
+        height: 40px;
+        transform-origin: bottom left;
+        transform: scale(2);
+        padding: 10px;
+    }
 }
-.borderd{
-    border: 2px dotted rgb(80, 233, 118);
-}
-
 .g-container{
-    // way to fix IT: https://stackoverflow.com/questions/54370822/how-to-make-the-items-in-the-last-row-consume-remaining-space-in-css-grid
-
     width: 90vw;
     height: 45vh;
 
@@ -47,56 +64,28 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    
-    /*
-    // lifesaver, switch between automatic columns based on rows or reversed
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    //grid-template-rows: 1fr minmax(1fr,1fr);
-    grid-template-rows: 1fr 1fr;
-
-    place-items: center;
-    grid-gap:1em;
-    */
-    
-    //grid-template-columns: repeat(3, 1fr);
 
     > div {
         flex: 0 0 17.66%;               // play with this value when adding new entries
         
         display: grid;
         place-items: center;
-        //height: 50%;
-        //width: 100px;
-
-        //display: grid;
-        //place-items: center;
-        
         //aspect-ratio: 1 / 1;
     }
 }
 @media all and (max-width: 724px){
     .g-container {
         width: 95vw;
-        height: 95vh;
+        height: 96%;
         flex-direction: column;
+    }
+    .main{
+        .lock{
+            transform: scale(2);
+        }
     }
 }
 
-// Sizing
-/*
-.container-fluid{
-    width: 90vw;
-}
-.row{
-    height: 20vh;
-}
-@media only screen and (max-width: 575px) {   
-    .row{
-        height: 45vh;
-    }    
-}
-*/
 // Buttons
 a{
     width: 100%;
@@ -164,6 +153,173 @@ a{
         filter: grayscale(0%);
     }
 }
+
+
+// ----- Lock Button by Aaron Iker: https://dribbble.com/ai -----
+$primary: #5628EE;
+$lightGrey: #99A3BA;
+
+.switch {
+    height: 24px;
+    width: 100px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    input {
+        display: none;
+        & + span {
+            padding-left: 50px;
+            min-height: 24px;
+            line-height: 24px;
+            display: block;
+            color: $lightGrey;
+            position: relative;
+            vertical-align: middle;
+            white-space: nowrap;
+            transition: color .3s ease;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 12px;
+            }
+            &:before {
+                top: 0;
+                left: 0;
+                width: 42px;
+                height: 24px;
+                background: #E4ECFA;
+                transition: all .3s ease;
+            }
+            &:after {
+                width: 18px;
+                height: 18px;
+                background: #fff;
+                top: 3px;
+                left: 3px;
+                box-shadow: 0 1px 3px rgba(#121621, .1);
+                transition: all .45s ease;
+            }
+            em {
+                width: 8px;
+                height: 7px;
+                background: $lightGrey;
+                position: absolute;
+                left: 8px;
+                bottom: 7px;
+                border-radius: 2px;
+                display: block;
+                z-index: 1;
+                transition: all .45s ease;
+                &:before {
+                    content: '';
+                    width: 2px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background: #fff;
+                    position: absolute;
+                    display: block;
+                    left: 50%;
+                    top: 50%;
+                    margin: -1px 0 0 -1px;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    border: 1px solid $lightGrey;
+                    border-bottom: 0;
+                    width: 6px;
+                    height: 4px;
+                    left: 1px;
+                    bottom: 6px;
+                    position: absolute;
+                    z-index: 1;
+                    transform-origin: 0 100%;
+                    transition: all .45s ease;
+                    transform: rotate(-35deg) translate(0, 1px);
+                }
+            }
+            strong {
+                font-weight: normal;
+                position: relative;
+                display: block;
+                top: 1px;
+                &:before,
+                &:after {
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: block;
+                    font-family: 'Mukta Malar', Arial;
+                    -webkit-backface-visibility: hidden;
+                }
+                &:before {
+                    content: 'Public';
+                    transition: all .3s ease .2s;
+                }
+                &:after {
+                    content: 'Private';
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: $primary;
+                    transition: all .3s ease;
+                    transform: translate(2px, 0);
+                }
+            }
+        }
+        &:checked {
+            & + span {
+                &:before {
+                    background: rgba($primary, .35);
+                }
+                &:after {
+                    background: #fff;
+                    transform: translate(18px, 0);
+                }
+                em {
+                    transform: translate(18px, 0);
+                    background: $primary;
+                    &:after {
+                        border-color: $primary;
+                        transform: rotate(0deg) translate(0, 0);
+                    }
+                }
+                strong {
+                    &:before {
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all .3s ease;
+                        transform: translate(-2px, 0);
+                    }
+                    &:after {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translate(0, 0);
+                        transition: all .3s ease .2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
 /*
 .my-mt-5{
     margin-top: 45px !important;
