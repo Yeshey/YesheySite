@@ -34,6 +34,12 @@ body:hover {
 }
 
 @media (pointer: coarse) {
+  * {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
   body {
     overflow: visible;
     /* show scrollbars */
@@ -64,6 +70,7 @@ body:hover {
 
 .main .lock {
   height: 40px;
+  width: 50%;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   -webkit-transform: scale(2);
@@ -107,8 +114,8 @@ body:hover {
             flex-direction: column;
   }
   .main .lock {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
