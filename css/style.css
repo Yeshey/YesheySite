@@ -239,6 +239,13 @@ a {
           transform: translateX(110vw);
 }
 
+.locked {
+  position: absolute;
+  -webkit-transform: translateY(-110vw);
+          transform: translateY(-110vw);
+  visibility: hidden;
+}
+
 .switch {
   height: 24px;
   width: 100px;

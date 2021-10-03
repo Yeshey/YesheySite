@@ -181,6 +181,11 @@ a{
 .hideshow-public{
     transform: translateX(110vw);
 }
+.locked{
+    position: absolute;
+    transform: translateY(-110vw);
+    visibility: hidden;
+}
 
 // ----- Lock Button by Aaron Iker: https://dribbble.com/ai -----
 $primary: #5628EE;
