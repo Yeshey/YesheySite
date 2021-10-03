@@ -70,12 +70,15 @@ body:hover {
 
 .main .lock {
   height: 40px;
-  width: 50%;
+  width: 100%;
+  padding: 10px;
+}
+
+.main .lock .switch {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  padding: 10px;
+  -webkit-transform: scale(2.3);
+          transform: scale(2.3);
 }
 
 .g-container {
@@ -113,7 +116,9 @@ body:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main .lock {
+  .main .lock .switch {
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
@@ -146,6 +151,12 @@ a {
   background: url(../imgs/Instagram.svg) no-repeat left top;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
+}
+
+.facebook {
+  background: url(../imgs/facebook.svg) no-repeat left top;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .deviantart {
@@ -185,8 +196,8 @@ a {
 
 @media (hover: hover) {
   .imagewithin:hover {
-    -webkit-transition: 0.15s;
-    transition: 0.15s;
+    -webkit-transition: 0.12s;
+    transition: 0.12s;
     cursor: pointer;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
@@ -207,6 +218,22 @@ a {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
   }
+}
+
+#privates {
+  position: absolute;
+}
+
+.hideshow-private {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transform: translateX(-110vw);
+          transform: translateX(-110vw);
+}
+
+.hideshow-public {
+  -webkit-transform: translateX(110vw);
+          transform: translateX(110vw);
 }
 
 .switch {
