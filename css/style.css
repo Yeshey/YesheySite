@@ -45,7 +45,17 @@ body:hover {
     /* show scrollbars */
   }
   .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
+  }
+  .main > *:last-child {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-top: 10px;
   }
 }
 
