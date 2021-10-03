@@ -39,6 +39,9 @@ body {
     body {
         overflow: visible; /* show scrollbars */
     }
+    .main {
+        overflow: hidden;;
+    }
 }
 
 .main{
