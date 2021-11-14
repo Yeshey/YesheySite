@@ -13,8 +13,11 @@ document.querySelector(".lock_btn").addEventListener('click', function(){
 var str = window.location.href
 str = str.substring(str.indexOf("?") + 1);
 console.log(str)
-let locked = document.querySelector(".locked");
+let locked = document.querySelectorAll(".locked");
 if (str == "rh4DHqcrR9KKgZ"){
-    locked.classList.remove("locked");
+    for (let i=0; i < locked.length; i++) {
+        locked[i].classList.remove("locked");
+    }
+    //locked[1].classList.remove("locked");
     document.querySelector(".lock_btn").click();
 }

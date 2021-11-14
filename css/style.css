@@ -180,8 +180,14 @@ a {
 
 .discord {
   background: url(../imgs/discord.svg) no-repeat left top;
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.linkedin {
+  background: url(../imgs/linkedin.svg) no-repeat left top;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .github {

@@ -134,7 +134,11 @@ a{
 }
 .discord{
     background: url(../imgs/discord.svg) no-repeat left top;
-    transform: rotate(3deg);
+    transform: rotate(-3deg);
+}
+.linkedin{
+    background: url(../imgs/linkedin.svg) no-repeat left top;
+    transform: rotate(2deg);
 }
 .github{
     background: url(../imgs/github-desktop.svg) no-repeat left top;
