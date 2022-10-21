@@ -132,9 +132,21 @@ a{
     background: url(../imgs/deviantart.svg) no-repeat left top;
     transform: rotate(1deg);
 }
-.discord{
+.discordPublic{
     background: url(../imgs/discord.svg) no-repeat left top;
     transform: rotate(-3deg);
+    
+    &:hover::after{
+        content: "Yeshey#8855";
+    } 
+}
+.discordPrivate{
+    background: url(../imgs/discord.svg) no-repeat left top;
+    transform: rotate(-3deg);
+    
+    &:hover::after{
+        content: "Jonnas#1835";
+    } 
 }
 .linkedin{
     background: url(../imgs/linkedin.svg) no-repeat left top;

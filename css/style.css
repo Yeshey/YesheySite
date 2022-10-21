@@ -178,10 +178,24 @@ a {
           transform: rotate(1deg);
 }
 
-.discord {
+.discordPublic {
   background: url(../imgs/discord.svg) no-repeat left top;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
+}
+
+.discordPublic:hover::after {
+  content: "Yeshey#8855";
+}
+
+.discordPrivate {
+  background: url(../imgs/discord.svg) no-repeat left top;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.discordPrivate:hover::after {
+  content: "Jonnas#1835";
 }
 
 .linkedin {
