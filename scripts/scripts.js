@@ -14,7 +14,7 @@ var str = window.location.href
 str = str.substring(str.indexOf("?") + 1);
 console.log(str)
 let locked = document.querySelectorAll(".locked");
-if (str == "rh4DHqcrR9KKgZ"){
+if (str == "rh4DHqcrR9KKgZ" || str == "rh4DHqcrR9KKgZ="){
     for (let i=0; i < locked.length; i++) {
         locked[i].classList.remove("locked");
     }
