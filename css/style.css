@@ -184,10 +184,6 @@ a {
           transform: rotate(-3deg);
 }
 
-.discordPublic:hover::after {
-  content: "Yeshey#8855";
-}
-
 .discordPrivate {
   background: url(../imgs/discord.svg) no-repeat left top;
   -webkit-transform: rotate(-3deg);

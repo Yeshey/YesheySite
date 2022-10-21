@@ -136,9 +136,9 @@ a{
     background: url(../imgs/discord.svg) no-repeat left top;
     transform: rotate(-3deg);
     
-    &:hover::after{
-        content: "Yeshey#8855";
-    } 
+    //&:hover::after{
+    //    content: "Yeshey#8855";
+    //} 
 }
 .discordPrivate{
     background: url(../imgs/discord.svg) no-repeat left top;
